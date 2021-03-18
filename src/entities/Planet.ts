@@ -21,7 +21,7 @@ import {
     @Column()
     terreno: string;
 
-    @Column({default: 0})
+    @Column()
     nr_filmes: number;
   
     @CreateDateColumn()

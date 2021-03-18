@@ -35,8 +35,8 @@ class PlanetsRepository implements IPlanetsRepository{
     return this.ormRepository.find();
   }
 
-  public async create({nome, clima, terreno}: ICreatePlanetDTO): Promise<Planet> {   
-    const planet = this.ormRepository.create({nome, clima, terreno});
+  public async create({nome, clima, terreno, nr_filmes}: ICreatePlanetDTO): Promise<Planet> {   
+    const planet = this.ormRepository.create({nome, clima, terreno, nr_filmes});
 
     await this.ormRepository.save(planet);
 
